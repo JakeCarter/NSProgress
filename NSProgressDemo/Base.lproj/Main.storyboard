@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WHe-mG-wBB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="36h-C4-rle">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="WHe-mG-wBB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MRx-aW-mLo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ged-hu-a3e" kind="relationship" relationship="rootViewController" id="ubv-xi-hOE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxy-BI-JEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403" y="247"/>
+        </scene>
+        <!--Item Details View Controller - Item Details-->
+        <scene sceneID="YDA-Ug-PDZ">
+            <objects>
+                <viewController id="Ged-hu-a3e" customClass="ItemDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EWs-rL-EMc"/>
+                        <viewControllerLayoutGuide type="bottom" id="lqD-Qm-NJT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5rw-Il-bFS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0nf-B6-NAP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView appearanceType="aqua" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0m4-a1-L4M">
+                                <rect key="frame" x="0.0" y="64" width="320" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0m4-a1-L4M" firstAttribute="leading" secondItem="5rw-Il-bFS" secondAttribute="leading" id="2dJ-Ge-2NH"/>
+                            <constraint firstAttribute="trailing" secondItem="0m4-a1-L4M" secondAttribute="trailing" id="Ar0-PW-Qrn"/>
+                            <constraint firstItem="0nf-B6-NAP" firstAttribute="top" secondItem="EWs-rL-EMc" secondAttribute="bottom" id="NAR-mu-elt"/>
+                            <constraint firstItem="0m4-a1-L4M" firstAttribute="top" secondItem="EWs-rL-EMc" secondAttribute="bottom" id="NrB-ym-SWm"/>
+                            <constraint firstItem="0nf-B6-NAP" firstAttribute="leading" secondItem="5rw-Il-bFS" secondAttribute="leading" id="Vmv-bA-0dN"/>
+                            <constraint firstItem="lqD-Qm-NJT" firstAttribute="top" secondItem="0nf-B6-NAP" secondAttribute="bottom" id="nhg-qV-236"/>
+                            <constraint firstAttribute="trailing" secondItem="0nf-B6-NAP" secondAttribute="trailing" id="sc8-iC-mfo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Item Details" id="hgv-hE-5kq">
+                        <barButtonItem key="leftBarButtonItem" title="Reset" id="AES-yG-B70">
+                            <connections>
+                                <action selector="resetButtonTapped:" destination="Ged-hu-a3e" id="xTj-br-ft5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Download" id="aSF-M8-7ex">
+                            <connections>
+                                <action selector="downloadButtonTapped:" destination="Ged-hu-a3e" id="nab-sy-0G0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="0nf-B6-NAP" id="EaX-Az-kYn"/>
+                        <outlet property="progressView" destination="0m4-a1-L4M" id="qBa-TZ-o36"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umg-Oh-LOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815" y="247"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
